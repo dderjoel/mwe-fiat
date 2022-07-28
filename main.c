@@ -26,26 +26,3 @@ int main(int argc, char **argv) {
 
   return 0;
 }
-
-// Methods of interest:
-//
-// grep -e ' [a-z0-9_]\+\(square\|mul\)(' -r fiat -ho
-//
-// fiat_25519_carry_mul
-// fiat_25519_carry_square
-// fiat_p384_mul
-// fiat_p384_square
-// fiat_p224_mul
-// fiat_p224_square
-// fiat_p448_carry_mul
-// fiat_p448_carry_square
-// fiat_p521_carry_mul
-// fiat_p521_carry_square
-// fiat_p434_mul
-// fiat_p434_square
-// fiat_p256_mul
-// fiat_p256_square
-// fiat_secp256k1_mul
-// fiat_secp256k1_square
-// fiat_poly1305_carry_mul
-// fiat_poly1305_carry_square
