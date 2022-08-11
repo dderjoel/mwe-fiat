@@ -10,10 +10,7 @@ void fill_random(uint64_t dest[], const int len) {
 
 int parseArg(int argc, char **argv) {
   if (argc < 2) {
-    fprintf(stderr,
-            "Please call with number of iterations to perform.\n%s 1000\n",
-            argv[0]);
-    return 0;
+    return -1;
   }
   return atoi(argv[1]);
 }

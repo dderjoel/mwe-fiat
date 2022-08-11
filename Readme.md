@@ -12,7 +12,7 @@ make
 
 ### Run
 
-Run it with the iterations to perform.
+Run it with the iterations to perform (defaults to 10000, if none is specified)
 `./mwe.out 10000`
 or use the `run` target of the Makefile with
 

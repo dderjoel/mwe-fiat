@@ -17,6 +17,9 @@ int main(int argc, char **argv) {
   // Optionally fill the input with random data.
   fill_random(input1, LEN);
   fill_random(input2, LEN);
+  if (iterations == -1) {
+    iterations = 10000;
+  }
 
   for (int i = 0; i < iterations; i++) {
     // To measure a diferent method, include a different c-file first
