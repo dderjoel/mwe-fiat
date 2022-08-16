@@ -6,6 +6,12 @@
 // currenlty 9 uint's long
 #define LEN 9
 
+void function(uint64_t *output, uint64_t *input1, uint64_t *input2) {
+  // To measure a diferent method, include a different c-file first
+  // then change the method here.
+  fiat_25519_carry_mul(output, input1, input2);
+}
+
 int main(int argc, char **argv) {
 
   int iterations = parseArg(argc, argv);
@@ -22,9 +28,7 @@ int main(int argc, char **argv) {
   }
 
   for (int i = 0; i < iterations; i++) {
-    // To measure a diferent method, include a different c-file first
-    // then change the method here.
-    fiat_25519_carry_mul(output, input1, input2);
+    function(output, input1, input2);
   }
 
   return 0;
