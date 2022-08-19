@@ -54,3 +54,4 @@ List obtained with: `grep -e ' [a-z0-9_]\+\(square\|mul\)(' -r fiat -ho | sed 's
 ## Credit
 
 The Fiat-files in the `fiat` directory are from the [Fiat Cryptography](https://github.com/mit-plv/fiat-crypto/tree/0f61b56dda31384cbeb76f14b03b522d21e27b26/fiat-c/src) project.
+The SCMUL function is based on from [OpenSSL](https://github.com/openssl/openssl/blob/master/crypto/ec/curve25519.c) and [SUPERCOP](https://bench.cr.yp.to/supercop.html), replacing the field-method with the one's from fiat.
