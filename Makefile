@@ -7,9 +7,9 @@ BIN=mwe.out
 all: $(BIN)
 
 %.o: %.c
-	$(CC) $(CFLGAS) -c $(<) -o $(@)
+	$(CC) $(CFLGAS) -c $(<)  -o $(@)
 
-$(BIN): main.o helper.o
+$(BIN): main.o helper.o supercop/base.o supercop/field.o
 	$(CC) $(CFLGAS) $(^) -lm -o $(@)
 
 run: $(BIN)

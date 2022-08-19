@@ -9,6 +9,7 @@
 #include "fiat/secp256k1_64.c"
 
 #include "helper.h"
+#include "supercop/base.h"
 
 // running `grep -ri 'typedef uint' -e fiat` shows, that the longest element is
 // currenlty 9 uint's long
@@ -68,6 +69,12 @@ void function16(uint64_t *output, uint64_t *input1, uint64_t *input2) {
 void function17(uint64_t *output, uint64_t *input1, uint64_t *input2) {
   fiat_poly1305_carry_square(output, input1);
 }
+// curve25519 - scmul
+void function18(uint64_t *output, uint64_t *input1, uint64_t *input2) {
+  // needs 32bytes.
+  // rn, LEN is 9, ie. 9*uint64_t  = 9*8 bytes =72bytes.
+  crypto_scalarmult_base((uint8_t *)output, (uint8_t *)input1);
+}
 
 int main(int argc, char **argv) {
 
@@ -85,7 +92,7 @@ int main(int argc, char **argv) {
   }
 
   for (int i = 0; i < iterations; i++) {
-    function0(output, input1, input2);
+    function18(output, input1, input2);
   }
 
   return 0;
