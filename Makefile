@@ -9,7 +9,7 @@ all: $(BIN)
 %.o: %.c
 	$(CC) $(CFLGAS) -c $(<)  -o $(@)
 
-$(BIN): main.o helper.o supercop/base.o supercop/field.o
+$(BIN): main.o
 	$(CC) $(CFLGAS) $(^) -lm -o $(@)
 
 run: $(BIN)

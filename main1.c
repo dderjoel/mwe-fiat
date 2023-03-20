@@ -86,7 +86,7 @@ int main(int argc, char **argv) {
   fill_random(input2, LEN);
 
   for (int i = 0; i < 100000; i++) {
-    functionX(output, input1, input2);
+    function1(output, input1, input2);
   }
 
   return 0;
