@@ -164,7 +164,7 @@ static FIAT_SECP256K1_FIAT_INLINE void fiat_secp256k1_cmovznz_u64(uint64_t* out1
  *   0 ≤ eval out1 < m
  *
  */
-static FIAT_SECP256K1_FIAT_INLINE void fiat_secp256k1_mul(fiat_secp256k1_montgomery_domain_field_element out1, const fiat_secp256k1_montgomery_domain_field_element arg1, const fiat_secp256k1_montgomery_domain_field_element arg2) {
+void fiat_secp256k1_mul(fiat_secp256k1_montgomery_domain_field_element out1, const fiat_secp256k1_montgomery_domain_field_element arg1, const fiat_secp256k1_montgomery_domain_field_element arg2) {
   uint64_t x1;
   uint64_t x2;
   uint64_t x3;
@@ -519,7 +519,7 @@ static FIAT_SECP256K1_FIAT_INLINE void fiat_secp256k1_mul(fiat_secp256k1_montgom
  *   0 ≤ eval out1 < m
  *
  */
-static FIAT_SECP256K1_FIAT_INLINE void fiat_secp256k1_square(fiat_secp256k1_montgomery_domain_field_element out1, const fiat_secp256k1_montgomery_domain_field_element arg1) {
+void fiat_secp256k1_square(fiat_secp256k1_montgomery_domain_field_element out1, const fiat_secp256k1_montgomery_domain_field_element arg1) {
   uint64_t x1;
   uint64_t x2;
   uint64_t x3;

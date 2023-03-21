@@ -130,7 +130,7 @@ static FIAT_P448_FIAT_INLINE void fiat_p448_cmovznz_u64(uint64_t* out1, fiat_p44
  *   eval out1 mod m = (eval arg1 * eval arg2) mod m
  *
  */
-static FIAT_P448_FIAT_INLINE void fiat_p448_carry_mul(fiat_p448_tight_field_element out1, const fiat_p448_loose_field_element arg1, const fiat_p448_loose_field_element arg2) {
+void fiat_p448_carry_mul(fiat_p448_tight_field_element out1, const fiat_p448_loose_field_element arg1, const fiat_p448_loose_field_element arg2) {
   fiat_p448_uint128 x1;
   fiat_p448_uint128 x2;
   fiat_p448_uint128 x3;
@@ -436,7 +436,7 @@ static FIAT_P448_FIAT_INLINE void fiat_p448_carry_mul(fiat_p448_tight_field_elem
  *   eval out1 mod m = (eval arg1 * eval arg1) mod m
  *
  */
-static FIAT_P448_FIAT_INLINE void fiat_p448_carry_square(fiat_p448_tight_field_element out1, const fiat_p448_loose_field_element arg1) {
+void fiat_p448_carry_square(fiat_p448_tight_field_element out1, const fiat_p448_loose_field_element arg1) {
   uint64_t x1;
   uint64_t x2;
   uint64_t x3;
